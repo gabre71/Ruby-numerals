@@ -3,7 +3,9 @@
   <div class="field">
     <label for="number"> Please enter a number: </label>
     <%= text_field_tag :number, params[:number] %>
-      <label for="result">The result is: <%=  @result %></label>
+    <% unless @transform.nil? %>
+      <label for="result">The result is: <%=   @transform.result %></label>
+      <% end %>
   </div>
   <div class="actions">
     <%= submit_tag "Transform"%>
