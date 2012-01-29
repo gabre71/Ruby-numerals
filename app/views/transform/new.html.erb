@@ -1,2 +1,10 @@
-<h1>Transform#new</h1>
-<p>Find me in app/views/transform/new.html.erb</p>
+<h1>Ruby-numerals</h1>
+<%= form_tag( {:controller => "transform", :action => "create"}, :method => "post")%>
+  <div class="field">
+    <label for="number"> Please enter a number: </label>
+    <%= text_field_tag :number, params[:number] %>
+      <label for="result">The result is: <%=  @result %></label>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Transform"%>
+  </div>

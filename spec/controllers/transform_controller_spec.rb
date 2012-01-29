@@ -7,6 +7,10 @@ describe TransformController do
       get 'new'
       response.should be_success
     end
+    it "should contain text" do
+      
+    end
   end
+
 
 end
